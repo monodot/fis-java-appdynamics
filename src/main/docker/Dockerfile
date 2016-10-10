@@ -1,4 +1,4 @@
-FROM registry.access.redhat.com/jboss-fuse-6/fis-java-openshift:latest
+FROM registry.access.redhat.com/jboss-webserver-3/webserver30-tomcat8-openshift
 
 USER root
 

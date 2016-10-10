@@ -4,11 +4,11 @@
   "labels" : { },
   "metadata" : {
     "annotations" : {
-      "description" : "# fis-java-appdynamics\nbase build for any FIS application requiring appdynamics agents\n",
-      "fabric8.fis-java-appdynamics/iconUrl" : "img/icons/java.svg"
+      "description" : "# webserver30-tomcat8-appdynamics\nbase build for any FIS application requiring appdynamics agents\n",
+      "fabric8.webserver30-tomcat8-appdynamics/iconUrl" : "img/icons/java.svg"
     },
     "labels" : { },
-    "name" : "fis-java-appdynamics"
+    "name" : "webserver30-tomcat8-appdynamics"
   },
   "objects" : [ {
     "apiVersion" : "v1",
@@ -16,12 +16,12 @@
     "metadata" : {
       "annotations" : { },
       "labels" : {
-        "app" : "fis-java-appdynamics",
-        "project" : "fis-java-appdynamics",
+        "app" : "webserver30-tomcat8-appdynamics",
+        "project" : "webserver30-tomcat8-appdynamics",
         "version" : "1.0.0-SNAPSHOT",
         "group" : "openshift"
       },
-      "name" : "fis-java-appdynamics"
+      "name" : "webserver30-tomcat8-appdynamics"
     },
     "spec" : {
       "dockerImageRepository" : "",
@@ -33,24 +33,24 @@
     "metadata" : {
       "annotations" : { },
       "labels" : {
-        "app" : "fis-java-appdynamics",
-        "project" : "fis-java-appdynamics",
+        "app" : "webserver30-tomcat8-appdynamics",
+        "project" : "webserver30-tomcat8-appdynamics",
         "version" : "1.0.0-SNAPSHOT",
         "group" : "openshift"
       },
-      "name" : "fis-java-appdynamics"
+      "name" : "webserver30-tomcat8-appdynamics"
     },
     "spec" : {
       "output" : {
         "to" : {
           "kind" : "ImageStreamTag",
-          "name" : "fis-java-appdynamics:latest"
+          "name" : "webserver30-tomcat8-appdynamics:latest"
         }
       },
       "source" : {
         "contextDir" : "src/main/docker",
         "git" : {
-          "uri" : "https://github.com/benemon/fis-java-appdynamics"
+          "uri" : "https://github.com/monodot/webserver30-tomcat8-appdynamics"
         },
         "images" : [ ],
         "secrets" : [ ],
