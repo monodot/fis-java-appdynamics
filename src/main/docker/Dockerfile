@@ -7,9 +7,10 @@ ADD appdynamics/ /opt/appdynamics/
 RUN chown -R jboss:jboss /opt/appdynamics/
 RUN chmod -R g+rw /opt/appdynamics/
 RUN find /opt/appdynamics/ -type d -exec chmod g+x {} +
-RUN mkdir /deployments/logs
+RUN mkdir /deployments/agentlogs
+RUN chown -R jboss:jboss /deployments/agentlogs
 
-ENV JAVA_OPTS="-javaagent:/opt/appdynamics/javaagent.jar -Dappdynamics.agent.logs.dir=/deployments/logs ${JAVA_OPTS}" \
+ENV JAVA_OPTS="-javaagent:/opt/appdynamics/javaagent.jar -Dappdynamics.agent.logs.dir=/deployments/agentlogs ${JAVA_OPTS}" \
     JBOSS_IMAGE_NAME="webserver30-tomcat8-appdynamics" \
     JBOSS_IMAGE_VERSION="1.0"
 
