@@ -6,7 +6,7 @@ ADD appdynamics/ /opt/appdynamics/
 COPY usr/local/bin/ /usr/local/bin/
 
 RUN /usr/local/bin/fix-permissions.sh /usr/local/bin \
-  && /usr/local/bin/fix-permissions.sh opt/appdynamics \
+  && /usr/local/bin/fix-permissions.sh /opt/appdynamics \
   && chmod 775 /usr/local/bin/* \
   && chown -R jboss:jboss /opt/appdynamics
 
